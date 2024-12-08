@@ -5,13 +5,17 @@ using UnityEngine;
 public class ObjectSpawner : MonoBehaviour
 {
     public GameObject[] prefabs;
-
     public Transform spawnPosition;
+    public Canvas targetCanvas;
+
+    AudioSource audioSource;
+    public AudioClip[] sound;
+
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        audioSource = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -30,7 +34,22 @@ public class ObjectSpawner : MonoBehaviour
     {
         if(index >= 0 && index < prefabs.Length && prefabs[index] != null)
         {
-            Instantiate(prefabs[index], spawnPosition.position, Quaternion.identity);
+            // プレハブを生成
+            GameObject newObject = Instantiate(prefabs[index], spawnPosition.position, Quaternion.identity);
+
+            // Canvasに追加
+            if (targetCanvas != null)
+            {
+                newObject.transform.SetParent(targetCanvas.transform, false);
+
+                // RectTransformで位置を設定
+                RectTransform rectTransform = newObject.GetComponent<RectTransform>();
+                if (rectTransform != null)
+                {
+                    rectTransform.anchoredPosition = spawnPosition.GetComponent<RectTransform>().anchoredPosition;
+                }
+            }
+            audioSource.PlayOneShot(sound[index]);
         }
         else
         {
