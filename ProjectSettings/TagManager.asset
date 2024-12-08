@@ -3,7 +3,27 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - PlayerTower
+  - EnemyTower
+  - Dog
+  - Cat
+  - Monkey
+  - Crab
+  - Crane
+  - Turtle
+  - Cow
+  - Pig
+  - Rabbit
+  - EnemyDog
+  - EnemyCat
+  - EnemyMonkey
+  - EnemyCrab
+  - EnemyCrane
+  - EnemyTurtle
+  - EnemyCow
+  - EnemyPig
+  - EnemyRabbit
   layers:
   - Default
   - TransparentFX
