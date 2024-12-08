@@ -5,19 +5,25 @@ using UnityEngine;
 public class AnimationMove : MonoBehaviour
 {
     private Animator anim;
-    public GameObject parentObject;
+    public AudioClip sound1;
+    AudioSource audioSource;
 
     // Start is called before the first frame update
     void Start()
     {
         anim = gameObject.GetComponent<Animator>();
-        parentObject.SetActive(false);
+        audioSource = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
     public void hissatu()
     {
-        parentObject.SetActive(true);
         anim.SetBool("Swith", true);
+        audioSource.PlayOneShot(sound1);
+    }
+
+    public void OnAnimationEnd()
+    {
+        anim.SetBool("Swith", false);
     }
 }
