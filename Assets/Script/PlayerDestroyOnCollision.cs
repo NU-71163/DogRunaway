@@ -12,7 +12,7 @@ public class PlayerDestroyOnCollision : MonoBehaviour
             Timer timer = GameObject.Find("TimeManager").GetComponent<Timer>();
             if (timer != null)
             {
-                timer.currentTime += 30;
+                timer.currentTime -= 5;
                 GameObject timeObject = GameObject.Find("TimeManager");
                 if (timeObject != null)
                 {

@@ -60,6 +60,18 @@ public class Ueyamagage : MonoBehaviour
                     }
                 }
             }
+
+            GameObject animationObject = GameObject.Find("•KŽE");
+            if (animationObject != null)
+            {
+                Debug.Log("a");
+                AnimationMove animationScript = animationObject.GetComponent<AnimationMove>();
+                if (animationScript != null)
+                {
+                    animationScript.hissatu();
+                }
+            }
+
             ueyamaText.gameObject.SetActive(false);
             currentGageValue = 0;
             DashGage.value = currentGageValue;
