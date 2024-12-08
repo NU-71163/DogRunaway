@@ -9,6 +9,20 @@ public class PlayerDestroyOnCollision : MonoBehaviour
         if (other.gameObject.tag == "EnemyTower")
         {
             Destroy(gameObject);
+            Timer timer = GameObject.Find("TimeManager").GetComponent<Timer>();
+            if (timer != null)
+            {
+                timer.currentTime += 30;
+                GameObject timeObject = GameObject.Find("TimeManager");
+                if (timeObject != null)
+                {
+                    Timer timerScript = timeObject.GetComponent<Timer>();
+                    if (timeObject != null)
+                    {
+                        timerScript.UpdateTimerUI();
+                    }
+                }
+            }
         }
     }
 
