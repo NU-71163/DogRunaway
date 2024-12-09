@@ -8,6 +8,9 @@ public class HeartBreak : MonoBehaviour
     public GameObject objectD;
     public GameObject objectE;
 
+    public AudioClip sound1;
+    AudioSource audioSource;
+
     private int collisionCount = 0;
 
     private void OnCollisionEnter2D(Collision2D other)
@@ -20,12 +23,15 @@ public class HeartBreak : MonoBehaviour
             {
                 case 1:
                     Destroy(objectC);
+                    audioSource.PlayOneShot(sound1);
                     break;
                 case 2:
                     Destroy(objectD);
+                    audioSource.PlayOneShot(sound1);
                     break;
                 case 3:
                     Destroy(objectE);
+                    audioSource.PlayOneShot(sound1);
                     break;
                 default:
                     break;
@@ -39,12 +45,15 @@ public class HeartBreak : MonoBehaviour
             {
                 case 1:
                     Destroy(objectC);
+                    audioSource.PlayOneShot(sound1);
                     break;
                 case 2:
                     Destroy(objectD);
+                    audioSource.PlayOneShot(sound1);
                     break;
                 case 3:
                     Destroy(objectE);
+                    audioSource.PlayOneShot(sound1);
                     break;
                 default:
                     break;
@@ -58,12 +67,15 @@ public class HeartBreak : MonoBehaviour
             {
                 case 1:
                     Destroy(objectC);
+                    audioSource.PlayOneShot(sound1);
                     break;
                 case 2:
                     Destroy(objectD);
+                    audioSource.PlayOneShot(sound1);
                     break;
                 case 3:
                     Destroy(objectE);
+                    audioSource.PlayOneShot(sound1);
                     break;
                 default:
                     break;
@@ -77,12 +89,15 @@ public class HeartBreak : MonoBehaviour
             {
                 case 1:
                     Destroy(objectC);
+                    audioSource.PlayOneShot(sound1);
                     break;
                 case 2:
                     Destroy(objectD);
+                    audioSource.PlayOneShot(sound1);
                     break;
                 case 3:
                     Destroy(objectE);
+                    audioSource.PlayOneShot(sound1);
                     break;
                 default:
                     break;
@@ -96,12 +111,15 @@ public class HeartBreak : MonoBehaviour
             {
                 case 1:
                     Destroy(objectC);
+                    audioSource.PlayOneShot(sound1);
                     break;
                 case 2:
                     Destroy(objectD);
+                    audioSource.PlayOneShot(sound1);
                     break;
                 case 3:
                     Destroy(objectE);
+                    audioSource.PlayOneShot(sound1);
                     break;
                 default:
                     break;
@@ -115,12 +133,15 @@ public class HeartBreak : MonoBehaviour
             {
                 case 1:
                     Destroy(objectC);
+                    audioSource.PlayOneShot(sound1);
                     break;
                 case 2:
                     Destroy(objectD);
+                    audioSource.PlayOneShot(sound1);
                     break;
                 case 3:
                     Destroy(objectE);
+                    audioSource.PlayOneShot(sound1);
                     break;
                 default:
                     break;
@@ -134,12 +155,15 @@ public class HeartBreak : MonoBehaviour
             {
                 case 1:
                     Destroy(objectC);
+                    audioSource.PlayOneShot(sound1);
                     break;
                 case 2:
                     Destroy(objectD);
+                    audioSource.PlayOneShot(sound1);
                     break;
                 case 3:
                     Destroy(objectE);
+                    audioSource.PlayOneShot(sound1);
                     break;
                 default:
                     break;
@@ -153,12 +177,15 @@ public class HeartBreak : MonoBehaviour
             {
                 case 1:
                     Destroy(objectC);
+                    audioSource.PlayOneShot(sound1);
                     break;
                 case 2:
                     Destroy(objectD);
+                    audioSource.PlayOneShot(sound1);
                     break;
                 case 3:
                     Destroy(objectE);
+                    audioSource.PlayOneShot(sound1);
                     break;
                 default:
                     break;
@@ -172,12 +199,15 @@ public class HeartBreak : MonoBehaviour
             {
                 case 1:
                     Destroy(objectC);
+                    audioSource.PlayOneShot(sound1);
                     break;
                 case 2:
                     Destroy(objectD);
+                    audioSource.PlayOneShot(sound1);
                     break;
                 case 3:
                     Destroy(objectE);
+                    audioSource.PlayOneShot(sound1);
                     break;
                 default:
                     break;
@@ -187,7 +217,7 @@ public class HeartBreak : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        audioSource = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
