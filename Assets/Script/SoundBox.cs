@@ -17,6 +17,7 @@ public class SoundBox : MonoBehaviour
     AudioSource audioSource;
 
     public Text scoreText;
+    public Text finalText;
     public int score;
 
     // Start is called before the first frame update
@@ -86,7 +87,15 @@ public class SoundBox : MonoBehaviour
     {
         if (scoreText != null)
         {
-            scoreText.text = "Score: " + score.ToString();
+            scoreText.text = "スコア: " + score.ToString();
+        }
+    }
+
+    public void FinalScoreText()
+    {
+        if (scoreText != null)
+        {
+            finalText.text = "スコア: " + score.ToString();
         }
     }
 

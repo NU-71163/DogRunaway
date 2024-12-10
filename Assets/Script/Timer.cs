@@ -44,5 +44,32 @@ public class Timer : MonoBehaviour
         {
             timerText.text = currentTime.ToString("F0"); // 小数点以下1桁まで表示
         }
+
+        if(currentTime == 0)
+        {
+            WinAnimation();
+            GameObject soundObject = GameObject.Find("SoundManager2");
+            if(soundObject != null)
+            {
+                SoundBox soundBoxScript = soundObject.GetComponent<SoundBox>();
+                if(soundBoxScript != null)
+                {
+                    soundBoxScript.FinalScoreText();
+                }
+            }
+        }
+    }
+    
+    public void WinAnimation()
+    {
+        GameObject resultWinAnimationObject = GameObject.Find("結果（勝利）");
+        if (resultWinAnimationObject != null)
+        {
+            ResultWinAnimationMove resultWinAnimationScript = resultWinAnimationObject.GetComponent<ResultWinAnimationMove>();
+            if (resultWinAnimationScript != null)
+            {
+                resultWinAnimationScript.Win();
+            }
+        }
     }
 }
