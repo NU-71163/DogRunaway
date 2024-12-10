@@ -1,24 +1,15 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class SceneChanger : MonoBehaviour
 {
-    public void ChangeScene(string SceneName)
-    {
-        SceneManager.LoadScene(SceneName);
-    }
+    // 遷移先のシーン名
+    public string targetScene;
 
-    // Start is called before the first frame update
-    void Start()
+    // クリックされたときに呼び出される関数
+    public void OnImageClick()
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        // シーンをロード
+        SceneManager.LoadScene(targetScene);
     }
 }
