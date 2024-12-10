@@ -32,6 +32,16 @@ public class HeartBreak : MonoBehaviour
                 case 3:
                     Destroy(objectE);
                     audioSource.PlayOneShot(sound1);
+
+                    GameObject resultLoseanimationObject = GameObject.Find("åãâ ÅiîsñkÅj");
+                    if (resultLoseanimationObject != null)
+                    {
+                        ResultLoseAnimationMove resultLoseanimationScript = resultLoseanimationObject.GetComponent<ResultLoseAnimationMove>();
+                        if (resultLoseanimationScript != null)
+                        {
+                            resultLoseanimationScript.Lose();
+                        }
+                    }
                     break;
                 default:
                     break;
@@ -54,6 +64,16 @@ public class HeartBreak : MonoBehaviour
                 case 3:
                     Destroy(objectE);
                     audioSource.PlayOneShot(sound1);
+
+                    GameObject resultLoseanimationObject = GameObject.Find("åãâ ÅiîsñkÅj");
+                    if (resultLoseanimationObject != null)
+                    {
+                        ResultLoseAnimationMove resultLoseanimationScript = resultLoseanimationObject.GetComponent<ResultLoseAnimationMove>();
+                        if (resultLoseanimationScript != null)
+                        {
+                            resultLoseanimationScript.Lose();
+                        }
+                    }
                     break;
                 default:
                     break;

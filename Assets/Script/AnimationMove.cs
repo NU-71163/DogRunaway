@@ -22,7 +22,7 @@ public class AnimationMove : MonoBehaviour
         audioSource.PlayOneShot(sound1);
     }
 
-    public void OnAnimationEnd()
+   public void OnAnimationEnd()
     {
         anim.SetBool("Swith", false);
     }
