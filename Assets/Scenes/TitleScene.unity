@@ -599,7 +599,7 @@ GameObject:
   - component: {fileID: 595246959}
   - component: {fileID: 595246958}
   - component: {fileID: 595246957}
-  - component: {fileID: 595246956}
+  - component: {fileID: 595246960}
   m_Layer: 5
   m_Name: Image
   m_TagString: Untagged
@@ -607,23 +607,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &595246956
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 595246955}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d86ff4ff847385b4bb441ac3f928f046, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rotationSpeed: 9.1
-  rotationAngle: 5
-  rectTransform: {fileID: 0}
-  currentAngle: 0
-  isIncreasing: 1
 --- !u!114 &595246957
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -682,6 +665,20 @@ RectTransform:
   m_AnchoredPosition: {x: 10, y: -3}
   m_SizeDelta: {x: 10, y: 10}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &595246960
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 595246955}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f70b06cfa10f8aa4784c3e4f8b19f44b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotationSpeed: 9.1
+  rotationAngle: 5
 --- !u!1 &606009314
 GameObject:
   m_ObjectHideFlags: 0
@@ -1208,6 +1205,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1286169508}
   - component: {fileID: 1286169509}
+  - component: {fileID: 1286169510}
   m_Layer: 0
   m_Name: AniDogWhite2
   m_TagString: Untagged
@@ -1282,6 +1280,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1286169510
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1286169507}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f70b06cfa10f8aa4784c3e4f8b19f44b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotationSpeed: 10
+  rotationAngle: 10
 --- !u!1 &1361794983
 GameObject:
   m_ObjectHideFlags: 0
@@ -1722,11 +1734,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d86ff4ff847385b4bb441ac3f928f046, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rotationSpeed: 10
-  rotationAngle: 10
-  rectTransform: {fileID: 0}
-  currentAngle: 0
-  isIncreasing: 1
 --- !u!1 &1990765967
 GameObject:
   m_ObjectHideFlags: 0
