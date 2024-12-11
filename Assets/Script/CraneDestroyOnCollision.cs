@@ -30,6 +30,16 @@ public class CraneDestroyOnCollision : MonoBehaviour
                     soundBoxScript.Sound();
                 }
             }
+
+            GameObject spawnObject = GameObject.Find("ObjectSpawner");
+            if (spawnObject != null)
+            {
+                ObjectSpawner spawnScript = spawnObject.GetComponent<ObjectSpawner>();
+                if (spawnObject != null)
+                {
+                    spawnScript.HealSummonCount();
+                }
+            }
         }
         else if (other.gameObject.tag == "EnemyCow")
         {
@@ -55,6 +65,16 @@ public class CraneDestroyOnCollision : MonoBehaviour
                     soundBoxScript.Sound();
                 }
             }
+
+            GameObject spawnObject = GameObject.Find("ObjectSpawner");
+            if (spawnObject != null)
+            {
+                ObjectSpawner spawnScript = spawnObject.GetComponent<ObjectSpawner>();
+                if (spawnObject != null)
+                {
+                    spawnScript.HealSummonCount();
+                }
+            }
         }
         else if (other.gameObject.tag == "EnemyPig")
         {
@@ -78,6 +98,16 @@ public class CraneDestroyOnCollision : MonoBehaviour
                 if (soundBoxScript != null)
                 {
                     soundBoxScript.Sound();
+                }
+            }
+
+            GameObject spawnObject = GameObject.Find("ObjectSpawner");
+            if (spawnObject != null)
+            {
+                ObjectSpawner spawnScript = spawnObject.GetComponent<ObjectSpawner>();
+                if (spawnObject != null)
+                {
+                    spawnScript.HealSummonCount();
                 }
             }
         }

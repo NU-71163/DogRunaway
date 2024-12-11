@@ -30,6 +30,16 @@ public class CatDestroyOnCollision : MonoBehaviour
                     soundBoxScript.Sound();
                 }
             }
+
+            GameObject spawnObject = GameObject.Find("ObjectSpawner");
+            if (spawnObject != null)
+            {
+                ObjectSpawner spawnScript = spawnObject.GetComponent<ObjectSpawner>();
+                if (spawnObject != null)
+                {
+                    spawnScript.HealSummonCount();
+                }
+            }
         }
     }
 

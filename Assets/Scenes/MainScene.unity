@@ -645,6 +645,17 @@ MonoBehaviour:
   - {fileID: 2075286692}
   - {fileID: 1458218795}
   - {fileID: 1293862171}
+  summonCount: 3
+  UIobj:
+  - {fileID: 1722343817}
+  - {fileID: 1056227059}
+  - {fileID: 1963447887}
+  - {fileID: 1993864275}
+  - {fileID: 1297794802}
+  - {fileID: 424273223}
+  - {fileID: 2075286693}
+  - {fileID: 1458218796}
+  - {fileID: 1293862172}
 --- !u!4 &328036241
 Transform:
   m_ObjectHideFlags: 0
@@ -1187,7 +1198,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DashGage: {fileID: 2053631107}
-  maxGageValue: 1
+  maxGageValue: 20
   gageIncreaseValue: 1
   ueyamaGage: {fileID: 8300000, guid: b10d3528182d5f1469f034c7d5fe3a34, type: 3}
   ueyamaText: {fileID: 1780176375}
@@ -4248,6 +4259,7 @@ MonoBehaviour:
   objectD: {fileID: 2147117526}
   objectE: {fileID: 1974558381}
   sound1: {fileID: 8300000, guid: 1ddc349b4bb43814e9f687910e04ec64, type: 3}
+  collisionCount: 0
 --- !u!82 &1328442563
 AudioSource:
   m_ObjectHideFlags: 0

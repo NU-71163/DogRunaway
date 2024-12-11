@@ -15,6 +15,10 @@ public class ObjectSpawner : MonoBehaviour
 
     private bool[] keyPressed;
 
+    public int summonCount = 3;
+
+    public Image[] UIobj;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -30,20 +34,28 @@ public class ObjectSpawner : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        for (int i = 0; i < 9; i++)
+        if (summonCount <= 58 && summonCount != 0)
         {
-            // 該当キーが押され、かつまだ押されていない場合
-            if (Input.GetKeyDown((KeyCode)((int)KeyCode.Alpha1 + i)) && !keyPressed[i])
+            for (int i = 0; i < 9; i++)
             {
-                SpawnObject(i);
-                if (i < meters.Length && meters[i] != null)
+                // 該当キーが押され、かつまだ押されていない場合
+                if (Input.GetKeyDown((KeyCode)((int)KeyCode.Alpha1 + i)) && !keyPressed[i])
                 {
-                    StartCoroutine(meters[i].ReduceFillAmount(i));
-                }
+                    SpawnObject(i);
+                    if (i < meters.Length && meters[i] != null)
+                    {
+                        StartCoroutine(meters[i].ReduceFillAmount(i));
+                    }
 
-                // 押されたキーを無効化
-                keyPressed[i] = true;
+                    // 押されたキーを無効化
+                    keyPressed[i] = true;
+                    summonCount -= 1;
+                }
             }
+        }
+        else if (summonCount == 0)
+        {
+            KeyLock();
         }
     }
     
@@ -73,6 +85,21 @@ public class ObjectSpawner : MonoBehaviour
         for (int i = 0; i < 9; i++)
         {
             keyPressed[i] = true;
+        }
+    }
+
+    public void HealSummonCount()
+    {
+        summonCount += 1;
+        for (int i = 0; i < 9; i++)
+        {
+            if (!UIobj[i].enabled) // UIobjが無効なら、ReduceFillAmountが終了したことを意味します
+            {
+                for (int j = 0; j < 9; j++)
+                {
+                    keyPressed[j] = false;
+                }
+            }
         }
     }
 }

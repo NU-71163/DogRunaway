@@ -15,9 +15,10 @@ public class ResultLoseAnimationMove : MonoBehaviour
         audioSource = GetComponent<AudioSource>();
     }
 
-    public void Lose()
+    public bool Lose()
     {
         anim.SetBool("Lose", true);
+        return true;
     }
 
     public void OnAnimationSound()

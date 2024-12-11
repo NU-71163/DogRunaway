@@ -6,21 +6,18 @@ public class PlayerDestroyOnCollision : MonoBehaviour
 {
    private void OnTriggerEnter2D(Collider2D other)
     {
+        ResultLoseAnimationMove resultLoseAnimationMoveInstance = FindObjectOfType<ResultLoseAnimationMove>();
+
         if (other.gameObject.tag == "EnemyTower")
         {
             Destroy(gameObject);
-            Timer timer = GameObject.Find("TimeManager").GetComponent<Timer>();
-            if (timer != null)
+            GameObject spawnObject = GameObject.Find("ObjectSpawner");
+            if (spawnObject != null)
             {
-                timer.currentTime -= 5;
-                GameObject timeObject = GameObject.Find("TimeManager");
-                if (timeObject != null)
+                ObjectSpawner spawnScript = spawnObject.GetComponent<ObjectSpawner>();
+                if (spawnObject != null)
                 {
-                    Timer timerScript = timeObject.GetComponent<Timer>();
-                    if (timeObject != null)
-                    {
-                        timerScript.UpdateTimerUI();
-                    }
+                    spawnScript.HealSummonCount();
                 }
             }
         }

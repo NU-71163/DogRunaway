@@ -6,7 +6,7 @@ public class DogDestroyOnCollision : MonoBehaviour
 {
     private void OnTriggerEnter2D(Collider2D other)
     {
-       if (other.gameObject.tag == "EnemyCat")
+        if (other.gameObject.tag == "EnemyCat")
         {
             Destroy(gameObject);
             Destroy(other.gameObject);
@@ -28,6 +28,16 @@ public class DogDestroyOnCollision : MonoBehaviour
                 if (soundBoxScript != null)
                 {
                     soundBoxScript.Sound();
+                }
+            }
+
+            GameObject spawnObject = GameObject.Find("ObjectSpawner");
+            if (spawnObject != null)
+            {
+                ObjectSpawner spawnScript = spawnObject.GetComponent<ObjectSpawner>();
+                if (spawnObject != null)
+                {
+                    spawnScript.HealSummonCount();
                 }
             }
         }
@@ -53,6 +63,16 @@ public class DogDestroyOnCollision : MonoBehaviour
                 if (soundBoxScript != null)
                 {
                     soundBoxScript.Sound();
+                }
+            }
+
+            GameObject spawnObject = GameObject.Find("ObjectSpawner");
+            if (spawnObject != null)
+            {
+                ObjectSpawner spawnScript = spawnObject.GetComponent<ObjectSpawner>();
+                if (spawnObject != null)
+                {
+                    spawnScript.HealSummonCount();
                 }
             }
         }

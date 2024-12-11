@@ -30,6 +30,16 @@ public class CowDestroyOnCollision : MonoBehaviour
                     soundBoxScript.Sound();
                 }
             }
+
+            GameObject spawnObject = GameObject.Find("ObjectSpawner");
+            if (spawnObject != null)
+            {
+                ObjectSpawner spawnScript = spawnObject.GetComponent<ObjectSpawner>();
+                if (spawnObject != null)
+                {
+                    spawnScript.HealSummonCount();
+                }
+            }
         }
         else if (other.gameObject.tag == "EnemyCrane")
         {
@@ -53,6 +63,16 @@ public class CowDestroyOnCollision : MonoBehaviour
                 if (soundBoxScript != null)
                 {
                     soundBoxScript.Sound();
+                }
+            }
+
+            GameObject spawnObject = GameObject.Find("ObjectSpawner");
+            if (spawnObject != null)
+            {
+                ObjectSpawner spawnScript = spawnObject.GetComponent<ObjectSpawner>();
+                if (spawnObject != null)
+                {
+                    spawnScript.HealSummonCount();
                 }
             }
         }

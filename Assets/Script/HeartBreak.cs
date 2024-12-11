@@ -11,7 +11,7 @@ public class HeartBreak : MonoBehaviour
     public AudioClip sound1;
     AudioSource audioSource;
 
-    private int collisionCount = 0;
+    public int collisionCount = 0;
 
     private bool isActive = true;
 
