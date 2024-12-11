@@ -13,227 +13,399 @@ public class HeartBreak : MonoBehaviour
 
     private int collisionCount = 0;
 
+    private bool isActive = true;
+
     private void OnCollisionEnter2D(Collision2D other)
     {
-        if(other.gameObject.CompareTag("EnemyCat"))
+        if(isActive)
         {
-            collisionCount++;
-            
-            switch (collisionCount)
+            if (other.gameObject.CompareTag("EnemyCat"))
             {
-                case 1:
-                    Destroy(objectC);
-                    audioSource.PlayOneShot(sound1);
-                    break;
-                case 2:
-                    Destroy(objectD);
-                    audioSource.PlayOneShot(sound1);
-                    break;
-                case 3:
-                    Destroy(objectE);
-                    audioSource.PlayOneShot(sound1);
+                collisionCount++;
 
-                    GameObject resultLoseanimationObject = GameObject.Find("åãâ ÅiîsñkÅj");
-                    if (resultLoseanimationObject != null)
-                    {
-                        ResultLoseAnimationMove resultLoseanimationScript = resultLoseanimationObject.GetComponent<ResultLoseAnimationMove>();
-                        if (resultLoseanimationScript != null)
+                switch (collisionCount)
+                {
+                    case 1:
+                        Destroy(objectC);
+                        audioSource.PlayOneShot(sound1);
+                        break;
+                    case 2:
+                        Destroy(objectD);
+                        audioSource.PlayOneShot(sound1);
+                        break;
+                    case 3:
+                        Destroy(objectE);
+                        audioSource.PlayOneShot(sound1);
+
+                        GameObject spawnObject = GameObject.Find("ObjectSpawner");
+                        if (spawnObject != null)
                         {
-                            resultLoseanimationScript.Lose();
+                            ObjectSpawner spawnScript = spawnObject.GetComponent<ObjectSpawner>();
+                            if (spawnScript != null)
+                            {
+                                spawnScript.KeyLock();
+                            }
                         }
-                    }
-                    break;
-                default:
-                    break;
-            }
-        }
-        else if(other.gameObject.CompareTag("EnemyDog"))
-        {
-            collisionCount++;
 
-            switch (collisionCount)
-            {
-                case 1:
-                    Destroy(objectC);
-                    audioSource.PlayOneShot(sound1);
-                    break;
-                case 2:
-                    Destroy(objectD);
-                    audioSource.PlayOneShot(sound1);
-                    break;
-                case 3:
-                    Destroy(objectE);
-                    audioSource.PlayOneShot(sound1);
-
-                    GameObject resultLoseanimationObject = GameObject.Find("åãâ ÅiîsñkÅj");
-                    if (resultLoseanimationObject != null)
-                    {
-                        ResultLoseAnimationMove resultLoseanimationScript = resultLoseanimationObject.GetComponent<ResultLoseAnimationMove>();
-                        if (resultLoseanimationScript != null)
+                        GameObject resultLoseanimationObject = GameObject.Find("åãâ ÅiîsñkÅj");
+                        if (resultLoseanimationObject != null)
                         {
-                            resultLoseanimationScript.Lose();
+                            ResultLoseAnimationMove resultLoseanimationScript = resultLoseanimationObject.GetComponent<ResultLoseAnimationMove>();
+                            if (resultLoseanimationScript != null)
+                            {
+                                resultLoseanimationScript.Lose();
+                            }
                         }
-                    }
-                    break;
-                default:
-                    break;
+                        break;
+                    default:
+                        break;
+                }
             }
-        }
-        else if (other.gameObject.CompareTag("EnemyCrab"))
-        {
-            collisionCount++;
-
-            switch (collisionCount)
+            else if (other.gameObject.CompareTag("EnemyDog"))
             {
-                case 1:
-                    Destroy(objectC);
-                    audioSource.PlayOneShot(sound1);
-                    break;
-                case 2:
-                    Destroy(objectD);
-                    audioSource.PlayOneShot(sound1);
-                    break;
-                case 3:
-                    Destroy(objectE);
-                    audioSource.PlayOneShot(sound1);
-                    break;
-                default:
-                    break;
+                collisionCount++;
+
+                switch (collisionCount)
+                {
+                    case 1:
+                        Destroy(objectC);
+                        audioSource.PlayOneShot(sound1);
+                        break;
+                    case 2:
+                        Destroy(objectD);
+                        audioSource.PlayOneShot(sound1);
+                        break;
+                    case 3:
+                        Destroy(objectE);
+                        audioSource.PlayOneShot(sound1);
+
+                        GameObject spawnObject = GameObject.Find("ObjectSpawner");
+                        if (spawnObject != null)
+                        {
+                            ObjectSpawner spawnScript = spawnObject.GetComponent<ObjectSpawner>();
+                            if (spawnScript != null)
+                            {
+                                spawnScript.KeyLock();
+                            }
+                        }
+
+                        GameObject resultLoseanimationObject = GameObject.Find("åãâ ÅiîsñkÅj");
+                        if (resultLoseanimationObject != null)
+                        {
+                            ResultLoseAnimationMove resultLoseanimationScript = resultLoseanimationObject.GetComponent<ResultLoseAnimationMove>();
+                            if (resultLoseanimationScript != null)
+                            {
+                                resultLoseanimationScript.Lose();
+                            }
+                        }
+                        break;
+                    default:
+                        break;
+                }
             }
-        }
-        else if (other.gameObject.CompareTag("EnemyCrane"))
-        {
-            collisionCount++;
-
-            switch (collisionCount)
+            else if (other.gameObject.CompareTag("EnemyCrab"))
             {
-                case 1:
-                    Destroy(objectC);
-                    audioSource.PlayOneShot(sound1);
-                    break;
-                case 2:
-                    Destroy(objectD);
-                    audioSource.PlayOneShot(sound1);
-                    break;
-                case 3:
-                    Destroy(objectE);
-                    audioSource.PlayOneShot(sound1);
-                    break;
-                default:
-                    break;
+                collisionCount++;
+
+                switch (collisionCount)
+                {
+                    case 1:
+                        Destroy(objectC);
+                        audioSource.PlayOneShot(sound1);
+                        break;
+                    case 2:
+                        Destroy(objectD);
+                        audioSource.PlayOneShot(sound1);
+                        break;
+                    case 3:
+                        Destroy(objectE);
+                        audioSource.PlayOneShot(sound1);
+
+                        GameObject spawnObject = GameObject.Find("ObjectSpawner");
+                        if (spawnObject != null)
+                        {
+                            ObjectSpawner spawnScript = spawnObject.GetComponent<ObjectSpawner>();
+                            if (spawnScript != null)
+                            {
+                                spawnScript.KeyLock();
+                            }
+                        }
+
+                        GameObject resultLoseanimationObject = GameObject.Find("åãâ ÅiîsñkÅj");
+                        if (resultLoseanimationObject != null)
+                        {
+                            ResultLoseAnimationMove resultLoseanimationScript = resultLoseanimationObject.GetComponent<ResultLoseAnimationMove>();
+                            if (resultLoseanimationScript != null)
+                            {
+                                resultLoseanimationScript.Lose();
+                            }
+                        }
+                        break;
+                    default:
+                        break;
+                }
             }
-        }
-        else if (other.gameObject.CompareTag("EnemyMonkey"))
-        {
-            collisionCount++;
-
-            switch (collisionCount)
+            else if (other.gameObject.CompareTag("EnemyCrane"))
             {
-                case 1:
-                    Destroy(objectC);
-                    audioSource.PlayOneShot(sound1);
-                    break;
-                case 2:
-                    Destroy(objectD);
-                    audioSource.PlayOneShot(sound1);
-                    break;
-                case 3:
-                    Destroy(objectE);
-                    audioSource.PlayOneShot(sound1);
-                    break;
-                default:
-                    break;
+                collisionCount++;
+
+                switch (collisionCount)
+                {
+                    case 1:
+                        Destroy(objectC);
+                        audioSource.PlayOneShot(sound1);
+                        break;
+                    case 2:
+                        Destroy(objectD);
+                        audioSource.PlayOneShot(sound1);
+                        break;
+                    case 3:
+                        Destroy(objectE);
+                        audioSource.PlayOneShot(sound1);
+
+                        GameObject spawnObject = GameObject.Find("ObjectSpawner");
+                        if (spawnObject != null)
+                        {
+                            ObjectSpawner spawnScript = spawnObject.GetComponent<ObjectSpawner>();
+                            if (spawnScript != null)
+                            {
+                                spawnScript.KeyLock();
+                            }
+                        }
+
+                        GameObject resultLoseanimationObject = GameObject.Find("åãâ ÅiîsñkÅj");
+                        if (resultLoseanimationObject != null)
+                        {
+                            ResultLoseAnimationMove resultLoseanimationScript = resultLoseanimationObject.GetComponent<ResultLoseAnimationMove>();
+                            if (resultLoseanimationScript != null)
+                            {
+                                resultLoseanimationScript.Lose();
+                            }
+                        }
+                        break;
+                    default:
+                        break;
+                }
             }
-        }
-        else if (other.gameObject.CompareTag("EnemyTurtle"))
-        {
-            collisionCount++;
-
-            switch (collisionCount)
+            else if (other.gameObject.CompareTag("EnemyMonkey"))
             {
-                case 1:
-                    Destroy(objectC);
-                    audioSource.PlayOneShot(sound1);
-                    break;
-                case 2:
-                    Destroy(objectD);
-                    audioSource.PlayOneShot(sound1);
-                    break;
-                case 3:
-                    Destroy(objectE);
-                    audioSource.PlayOneShot(sound1);
-                    break;
-                default:
-                    break;
+                collisionCount++;
+
+                switch (collisionCount)
+                {
+                    case 1:
+                        Destroy(objectC);
+                        audioSource.PlayOneShot(sound1);
+                        break;
+                    case 2:
+                        Destroy(objectD);
+                        audioSource.PlayOneShot(sound1);
+                        break;
+                    case 3:
+                        Destroy(objectE);
+                        audioSource.PlayOneShot(sound1);
+
+                        GameObject spawnObject = GameObject.Find("ObjectSpawner");
+                        if (spawnObject != null)
+                        {
+                            ObjectSpawner spawnScript = spawnObject.GetComponent<ObjectSpawner>();
+                            if (spawnScript != null)
+                            {
+                                spawnScript.KeyLock();
+                            }
+                        }
+
+                        GameObject resultLoseanimationObject = GameObject.Find("åãâ ÅiîsñkÅj");
+                        if (resultLoseanimationObject != null)
+                        {
+                            ResultLoseAnimationMove resultLoseanimationScript = resultLoseanimationObject.GetComponent<ResultLoseAnimationMove>();
+                            if (resultLoseanimationScript != null)
+                            {
+                                resultLoseanimationScript.Lose();
+                            }
+                        }
+                        break;
+                    default:
+                        break;
+                }
             }
-        }
-        else if (other.gameObject.CompareTag("EnemyPig"))
-        {
-            collisionCount++;
-
-            switch (collisionCount)
+            else if (other.gameObject.CompareTag("EnemyTurtle"))
             {
-                case 1:
-                    Destroy(objectC);
-                    audioSource.PlayOneShot(sound1);
-                    break;
-                case 2:
-                    Destroy(objectD);
-                    audioSource.PlayOneShot(sound1);
-                    break;
-                case 3:
-                    Destroy(objectE);
-                    audioSource.PlayOneShot(sound1);
-                    break;
-                default:
-                    break;
+                collisionCount++;
+
+                switch (collisionCount)
+                {
+                    case 1:
+                        Destroy(objectC);
+                        audioSource.PlayOneShot(sound1);
+                        break;
+                    case 2:
+                        Destroy(objectD);
+                        audioSource.PlayOneShot(sound1);
+                        break;
+                    case 3:
+                        Destroy(objectE);
+                        audioSource.PlayOneShot(sound1);
+
+                        GameObject spawnObject = GameObject.Find("ObjectSpawner");
+                        if (spawnObject != null)
+                        {
+                            ObjectSpawner spawnScript = spawnObject.GetComponent<ObjectSpawner>();
+                            if (spawnScript != null)
+                            {
+                                spawnScript.KeyLock();
+                            }
+                        }
+
+                        GameObject resultLoseanimationObject = GameObject.Find("åãâ ÅiîsñkÅj");
+                        if (resultLoseanimationObject != null)
+                        {
+                            ResultLoseAnimationMove resultLoseanimationScript = resultLoseanimationObject.GetComponent<ResultLoseAnimationMove>();
+                            if (resultLoseanimationScript != null)
+                            {
+                                resultLoseanimationScript.Lose();
+                            }
+                        }
+                        break;
+                    default:
+                        break;
+                }
             }
-        }
-        else if (other.gameObject.CompareTag("EnemyCow"))
-        {
-            collisionCount++;
-
-            switch (collisionCount)
+            else if (other.gameObject.CompareTag("EnemyPig"))
             {
-                case 1:
-                    Destroy(objectC);
-                    audioSource.PlayOneShot(sound1);
-                    break;
-                case 2:
-                    Destroy(objectD);
-                    audioSource.PlayOneShot(sound1);
-                    break;
-                case 3:
-                    Destroy(objectE);
-                    audioSource.PlayOneShot(sound1);
-                    break;
-                default:
-                    break;
+                collisionCount++;
+
+                switch (collisionCount)
+                {
+                    case 1:
+                        Destroy(objectC);
+                        audioSource.PlayOneShot(sound1);
+                        break;
+                    case 2:
+                        Destroy(objectD);
+                        audioSource.PlayOneShot(sound1);
+                        break;
+                    case 3:
+                        Destroy(objectE);
+                        audioSource.PlayOneShot(sound1);
+
+                        GameObject spawnObject = GameObject.Find("ObjectSpawner");
+                        if (spawnObject != null)
+                        {
+                            ObjectSpawner spawnScript = spawnObject.GetComponent<ObjectSpawner>();
+                            if (spawnScript != null)
+                            {
+                                spawnScript.KeyLock();
+                            }
+                        }
+
+                        GameObject resultLoseanimationObject = GameObject.Find("åãâ ÅiîsñkÅj");
+                        if (resultLoseanimationObject != null)
+                        {
+                            ResultLoseAnimationMove resultLoseanimationScript = resultLoseanimationObject.GetComponent<ResultLoseAnimationMove>();
+                            if (resultLoseanimationScript != null)
+                            {
+                                resultLoseanimationScript.Lose();
+                            }
+                        }
+                        break;
+                    default:
+                        break;
+                }
             }
-        }
-        else if (other.gameObject.CompareTag("EnemyRabbit"))
-        {
-            collisionCount++;
-
-            switch (collisionCount)
+            else if (other.gameObject.CompareTag("EnemyCow"))
             {
-                case 1:
-                    Destroy(objectC);
-                    audioSource.PlayOneShot(sound1);
-                    break;
-                case 2:
-                    Destroy(objectD);
-                    audioSource.PlayOneShot(sound1);
-                    break;
-                case 3:
-                    Destroy(objectE);
-                    audioSource.PlayOneShot(sound1);
-                    break;
-                default:
-                    break;
+                collisionCount++;
+
+                switch (collisionCount)
+                {
+                    case 1:
+                        Destroy(objectC);
+                        audioSource.PlayOneShot(sound1);
+                        break;
+                    case 2:
+                        Destroy(objectD);
+                        audioSource.PlayOneShot(sound1);
+                        break;
+                    case 3:
+                        Destroy(objectE);
+                        audioSource.PlayOneShot(sound1);
+
+                        GameObject spawnObject = GameObject.Find("ObjectSpawner");
+                        if (spawnObject != null)
+                        {
+                            ObjectSpawner spawnScript = spawnObject.GetComponent<ObjectSpawner>();
+                            if (spawnScript != null)
+                            {
+                                spawnScript.KeyLock();
+                            }
+                        }
+
+                        GameObject resultLoseanimationObject = GameObject.Find("åãâ ÅiîsñkÅj");
+                        if (resultLoseanimationObject != null)
+                        {
+                            ResultLoseAnimationMove resultLoseanimationScript = resultLoseanimationObject.GetComponent<ResultLoseAnimationMove>();
+                            if (resultLoseanimationScript != null)
+                            {
+                                resultLoseanimationScript.Lose();
+                            }
+                        }
+                        break;
+                    default:
+                        break;
+                }
+            }
+            else if (other.gameObject.CompareTag("EnemyRabbit"))
+            {
+                collisionCount++;
+
+                switch (collisionCount)
+                {
+                    case 1:
+                        Destroy(objectC);
+                        audioSource.PlayOneShot(sound1);
+                        break;
+                    case 2:
+                        Destroy(objectD);
+                        audioSource.PlayOneShot(sound1);
+                        break;
+                    case 3:
+                        Destroy(objectE);
+                        audioSource.PlayOneShot(sound1);
+
+                        GameObject spawnObject = GameObject.Find("ObjectSpawner");
+                        if (spawnObject != null)
+                        {
+                            ObjectSpawner spawnScript = spawnObject.GetComponent<ObjectSpawner>();
+                            if (spawnScript != null)
+                            {
+                                spawnScript.KeyLock();
+                            }
+                        }
+
+                        GameObject resultLoseanimationObject = GameObject.Find("åãâ ÅiîsñkÅj");
+                        if (resultLoseanimationObject != null)
+                        {
+                            ResultLoseAnimationMove resultLoseanimationScript = resultLoseanimationObject.GetComponent<ResultLoseAnimationMove>();
+                            if (resultLoseanimationScript != null)
+                            {
+                                resultLoseanimationScript.Lose();
+                            }
+                        }
+                        break;
+                    default:
+                        break;
+                }
             }
         }
     }
+
+    public void DisableOnCollisionEnter2D()
+    {
+        isActive = false;
+        Debug.Log("FunctionB is now disabled.");
+    }
+
     // Start is called before the first frame update
     void Start()
     {

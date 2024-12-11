@@ -67,4 +67,12 @@ public class ObjectSpawner : MonoBehaviour
             keyPressed[keyIndex] = false; // ƒL[‚ğ—LŒø‰»
         }
     }
+
+    public void KeyLock()
+    {
+        for (int i = 0; i < 9; i++)
+        {
+            keyPressed[i] = true;
+        }
+    }
 }

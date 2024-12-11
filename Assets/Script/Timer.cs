@@ -71,5 +71,25 @@ public class Timer : MonoBehaviour
                 resultWinAnimationScript.Win();
             }
         }
+
+        GameObject spawnObject = GameObject.Find("ObjectSpawner");
+        if (spawnObject != null)
+        {
+            ObjectSpawner spawnScript = spawnObject.GetComponent<ObjectSpawner>();
+            if (spawnScript != null)
+            {
+                spawnScript.KeyLock();
+            }
+        }
+
+        GameObject heartObject = GameObject.Find("ìÉÅié©ï™Åj");
+        if (heartObject != null)
+        {
+            HeartBreak heartScript = heartObject.GetComponent<HeartBreak>();
+            if (heartScript != null)
+            {
+                heartScript.DisableOnCollisionEnter2D();
+            }
+        }
     }
 }
