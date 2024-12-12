@@ -1204,8 +1204,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 708.54, y: 383.18}
-  m_SizeDelta: {x: 162.93, y: 53}
+  m_AnchoredPosition: {x: 579, y: 385}
+  m_SizeDelta: {x: 185, y: 53}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &426584620
 MonoBehaviour:
@@ -1240,7 +1240,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: New Text
+  m_Text: "\u53EC\u559A\u6570\uFF1A10"
 --- !u!222 &426584621
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2017,15 +2017,15 @@ RectTransform:
   m_GameObject: {fileID: 617848944}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2, y: 2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2117198348}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchoredPosition: {x: 917, y: 388}
+  m_SizeDelta: {x: 160, y: 53}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &617848946
 MonoBehaviour:
@@ -2049,10 +2049,10 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 14
-    m_FontStyle: 0
+    m_FontSize: 35
+    m_FontStyle: 1
     m_BestFit: 0
-    m_MinSize: 10
+    m_MinSize: 3
     m_MaxSize: 40
     m_Alignment: 0
     m_AlignByGeometry: 0
@@ -2060,7 +2060,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: New Text
+  m_Text: / 10
 --- !u!222 &617848947
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -4420,7 +4420,7 @@ MonoBehaviour:
   objectC: {fileID: 862899645}
   objectD: {fileID: 2147117526}
   objectE: {fileID: 1974558381}
-  sound1: {fileID: 8300000, guid: 1ddc349b4bb43814e9f687910e04ec64, type: 3}
+  sound1: {fileID: 8300000, guid: 252c7c7f350fdfc4daa1950565dbfd95, type: 3}
   collisionCount: 0
 --- !u!82 &1328442563
 AudioSource:
@@ -4813,7 +4813,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: New Text
+  m_Text: "\u30B9\u30B3\u30A2\uFF1A10"
 --- !u!222 &1476397537
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -4838,7 +4838,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 800, y: 428}
+  m_AnchoredPosition: {x: 641, y: 428}
   m_SizeDelta: {x: 250, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1503528667

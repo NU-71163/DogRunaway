@@ -33,6 +33,9 @@ public class ObjectSpawner : MonoBehaviour
         {
             keyPressed[i] = false;
         }
+
+        UpdateSummonText();
+        UpdateMaxSummonText();
     }
 
     // Update is called once per frame
@@ -54,7 +57,7 @@ public class ObjectSpawner : MonoBehaviour
                     // 押されたキーを無効化
                     keyPressed[i] = true;
                     summonCount -= 1;
-                    UpdatesummonText();
+                    UpdateSummonText();
                 }
             }
         }
@@ -96,7 +99,7 @@ public class ObjectSpawner : MonoBehaviour
     public void HealSummonCount()
     {
         summonCount += 1;
-        UpdatesummonText();
+        UpdateSummonText();
         for (int i = 0; i < 9; i++)
         {
             if (!UIobj[i].enabled) // UIobjが無効なら、ReduceFillAmountが終了したことを意味します
@@ -109,19 +112,19 @@ public class ObjectSpawner : MonoBehaviour
         }
     }
 
-    public void UpdatesummonText()
+    public void UpdateSummonText()
     {
         if (summonText != null)
         {
-            summonText.text = "召喚数: " + summonCount.ToString() + "/";
+            summonText.text = "召喚数: " + summonCount.ToString();
         }
     }
 
-    public void UpdatemaxSummonText()
+    public void UpdateMaxSummonText()
     {
         if(maxSummonText != null)
         {
-            maxSummonText.text = maxSummonCount.ToString();
+            maxSummonText.text = "/ " + maxSummonCount.ToString();
         }
     }
 }
