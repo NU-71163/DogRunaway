@@ -15,7 +15,7 @@ public class ObjectSpawner : MonoBehaviour
 
     private bool[] keyPressed;
 
-    public int maxSummonCount;
+    public int maxSummonCount = 3;
     public int summonCount;
 
     public Image[] UIobj;
