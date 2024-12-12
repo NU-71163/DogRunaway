@@ -82,6 +82,8 @@ public class Ueyamagage : MonoBehaviour
             objectSpawner.maxSummonCount += 2;
             int summonIncrease = 2; // •KE‹Z‚Å‘‰Á‚³‚¹‚é¢Š«‰Â”\”
             objectSpawner.summonCount = Mathf.Min(objectSpawner.summonCount + summonIncrease, objectSpawner.maxSummonCount);
+
+            objectSpawner.UpdatemaxSummonText();
         }
     }
 }
