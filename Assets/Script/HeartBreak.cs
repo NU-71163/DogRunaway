@@ -403,7 +403,6 @@ public class HeartBreak : MonoBehaviour
     public void DisableOnCollisionEnter2D()
     {
         isActive = false;
-        Debug.Log("FunctionB is now disabled.");
     }
 
     // Start is called before the first frame update

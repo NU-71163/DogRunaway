@@ -645,8 +645,8 @@ MonoBehaviour:
   - {fileID: 2075286692}
   - {fileID: 1458218795}
   - {fileID: 1293862171}
-  maxSummonCount: 3
-  summonCount: 3
+  maxSummonCount: 1
+  summonCount: 1
   UIobj:
   - {fileID: 1722343817}
   - {fileID: 1056227059}
