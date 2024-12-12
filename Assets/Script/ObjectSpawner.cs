@@ -15,7 +15,8 @@ public class ObjectSpawner : MonoBehaviour
 
     private bool[] keyPressed;
 
-    public int summonCount = 3;
+    public int maxSummonCount;
+    public int summonCount;
 
     public Image[] UIobj;
 
@@ -34,7 +35,7 @@ public class ObjectSpawner : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (summonCount <= 58 && summonCount != 0)
+        if (maxSummonCount >= summonCount && summonCount != 0)
         {
             for (int i = 0; i < 9; i++)
             {

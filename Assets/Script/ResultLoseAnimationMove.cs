@@ -8,6 +8,8 @@ public class ResultLoseAnimationMove : MonoBehaviour
     public AudioClip sound1;
     AudioSource audioSource;
 
+    public bool isLoseCalled = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -18,7 +20,8 @@ public class ResultLoseAnimationMove : MonoBehaviour
     public bool Lose()
     {
         anim.SetBool("Lose", true);
-        return true;
+        isLoseCalled = true; // ŒÄ‚Î‚ê‚½‚±‚Æ‚ð‹L˜^
+        return isLoseCalled;
     }
 
     public void OnAnimationSound()

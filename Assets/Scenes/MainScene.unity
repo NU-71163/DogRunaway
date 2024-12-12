@@ -1198,10 +1198,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DashGage: {fileID: 2053631107}
-  maxGageValue: 20
+  maxGageValue: 3
   gageIncreaseValue: 1
   ueyamaGage: {fileID: 8300000, guid: b10d3528182d5f1469f034c7d5fe3a34, type: 3}
   ueyamaText: {fileID: 1780176375}
+  objectSpawner: {fileID: 328036240}
 --- !u!4 &484349229
 Transform:
   m_ObjectHideFlags: 0
@@ -4793,6 +4794,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sound1: {fileID: 8300000, guid: 86a7048338d765a478ef29c6618f6295, type: 3}
+  isLoseCalled: 0
 --- !u!82 &1503528673
 AudioSource:
   m_ObjectHideFlags: 0

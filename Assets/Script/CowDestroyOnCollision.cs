@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class CowDestroyOnCollision : MonoBehaviour
 {
+    private ResultLoseAnimationMove resultLoseAnimationMove;
+
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.tag == "EnemyPig")
@@ -32,7 +34,7 @@ public class CowDestroyOnCollision : MonoBehaviour
             }
 
             GameObject spawnObject = GameObject.Find("ObjectSpawner");
-            if (spawnObject != null)
+            if (spawnObject != null && !resultLoseAnimationMove.isLoseCalled)
             {
                 ObjectSpawner spawnScript = spawnObject.GetComponent<ObjectSpawner>();
                 if (spawnObject != null)
@@ -67,7 +69,7 @@ public class CowDestroyOnCollision : MonoBehaviour
             }
 
             GameObject spawnObject = GameObject.Find("ObjectSpawner");
-            if (spawnObject != null)
+            if (spawnObject != null && !resultLoseAnimationMove.isLoseCalled)
             {
                 ObjectSpawner spawnScript = spawnObject.GetComponent<ObjectSpawner>();
                 if (spawnObject != null)
@@ -81,7 +83,7 @@ public class CowDestroyOnCollision : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        resultLoseAnimationMove = GameObject.FindObjectOfType<ResultLoseAnimationMove>();
     }
 
     // Update is called once per frame

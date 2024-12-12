@@ -81,7 +81,6 @@ public class RandomObjectSpawner : MonoBehaviour
 
             // 生成間隔を減少（生成速度を上げる）
             spawnInterval = Mathf.Max(minimumSpawnInterval, spawnInterval - spawnIntervalDecreaseAmount);
-            Debug.Log("生成速度アップ: " + spawnInterval + "秒");
         }
     }
 

@@ -16,6 +16,8 @@ public class Ueyamagage : MonoBehaviour
 
     public Text ueyamaText;
 
+    public ObjectSpawner objectSpawner;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -74,6 +76,12 @@ public class Ueyamagage : MonoBehaviour
             ueyamaText.gameObject.SetActive(false);
             currentGageValue = 0;
             DashGage.value = currentGageValue;
+            maxGageValue += 5;
+            DashGage.maxValue = maxGageValue;
+
+            objectSpawner.maxSummonCount += 2;
+            int summonIncrease = 2; // •KE‹Z‚Å‘‰Á‚³‚¹‚é¢Š«‰Â”\”
+            objectSpawner.summonCount = Mathf.Min(objectSpawner.summonCount + summonIncrease, objectSpawner.maxSummonCount);
         }
     }
 }
