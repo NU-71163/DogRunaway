@@ -99,6 +99,10 @@ public class SoundBox : MonoBehaviour
         }
     }
 
+    public void ScoreSwitch()
+    {
+        Score.scoreScore = score;
+    }
     // Update is called once per frame
     void Update()
     {

@@ -18,6 +18,15 @@ public class ResultWinAnimationMove : MonoBehaviour
     public void Win()
     {
         anim.SetBool("Win", true);
+        GameObject soundBoxObject = GameObject.Find("SoundManager2");
+        if (soundBoxObject != null)
+        {
+            SoundBox soundBoxScript = soundBoxObject.GetComponent<SoundBox>();
+            if (soundBoxScript != null)
+            {
+                soundBoxScript.ScoreSwitch();
+            }
+        }
     }
 
     public void OnAnimationSound()
