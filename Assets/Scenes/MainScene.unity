@@ -645,8 +645,8 @@ MonoBehaviour:
   - {fileID: 2075286692}
   - {fileID: 1458218795}
   - {fileID: 1293862171}
-  maxSummonCount: 1
-  summonCount: 1
+  maxSummonCount: 3
+  summonCount: 3
   UIobj:
   - {fileID: 1722343817}
   - {fileID: 1056227059}
@@ -1977,7 +1977,7 @@ MonoBehaviour:
   - {fileID: 3353300057426984820, guid: e885b0d90547f304da3bc366da5bdf04, type: 3}
   - {fileID: 280374832761523806, guid: fd307c39a6d149d4d9561395995e0589, type: 3}
   - {fileID: 8715541222234396828, guid: 8c078f26d8519044897c2348e645a395, type: 3}
-  initialSpawnInterval: 3
+  initialSpawnInterval: 5
   minimumSpawnInterval: 0.5
   speedIncreaseInterval: 20
   spawnIntervalDecreaseAmount: 0.5
