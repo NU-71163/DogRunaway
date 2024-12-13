@@ -27,6 +27,8 @@ public class ResultWinAnimationMove : MonoBehaviour
                 soundBoxScript.ScoreSwitch();
             }
         }
+
+        Score.mendoi();
     }
 
     public void OnAnimationSound()
